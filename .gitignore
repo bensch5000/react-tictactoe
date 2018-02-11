@@ -36,6 +36,7 @@
 ehthumbs.db
 Thumbs.db
 
-# NODE MODULES - 
+# FOLDERS #  
 ##################
 /node_modules/*
+/.vscode/*
