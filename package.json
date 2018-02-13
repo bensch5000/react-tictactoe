@@ -4,7 +4,10 @@
   "description": "TicTacToe Game in React.js ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run build",
+    "build": "webpack -d && cp src/index.html dist/index.html && webpack-dev-server --content-base src/ --inline --hot",
+    "build:prod": "webpack -p && cp src/index.html dist/index.html"
   },
   "keywords": [
     "react",
@@ -21,10 +24,15 @@
   "license": "ISC",
   "dependencies": {
     "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
+    "babel-preset-es2016": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
     "babel-preset-stage-3": "^6.24.1",
+    "css-loader": "^0.28.9",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "style-loader": "^0.20.1",
     "webpack": "^3.11.0",
     "webpack-dev-server": "^2.11.1"
   }
